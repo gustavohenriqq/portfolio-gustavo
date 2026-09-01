@@ -1,0 +1,8 @@
+Coloque aqui os prints dos projetos, com estes nomes exatos:
+
+- copa-2026.png        -> print do dashboard da Copa 2026 (Looker Studio)
+- dashboard-ambev.png  -> print do dashboard AMBEV SEM DADOS REAIS (mock/borrado, por confidencialidade)
+- workflow.png         -> print da tela do Workflow
+- codesentinel.png     -> print/diagrama do CodeSentinel
+
+Formato recomendado: PNG, proporção larga (ex: 1200x700). Enquanto o arquivo nao existir, aparece um espaco pontilhado no lugar.
