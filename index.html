@@ -329,6 +329,21 @@ h2{
 @media(max-width:860px){.about-grid{grid-template-columns:1fr}}
 .about p{margin-bottom:16px;font-size:15.5px;color:#A1A1AA}
 .about b{color:var(--white);font-weight:600}
+.me{display:flex;align-items:center;gap:18px;margin-bottom:26px}
+.me-photo{
+  width: 108px;
+  height: 108px;
+  flex: none;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 1px solid var(--b);
+  background: #0B0B0B;
+  transition: all .25s ease;
+}
+.me:hover .me-photo{border-color:var(--b-hover);transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.5)}
+.me-name{font-family:var(--font-title);font-weight:800;color:var(--white);font-size:19px;letter-spacing:-.3px}
+.me-role{color:var(--muted);font-size:13.5px;margin-top:5px}
+@media(max-width:520px){.me-photo{width:86px;height:86px}}
 .flow{
   font-family: var(--font-mono);
   font-size: 13px;
@@ -735,6 +750,13 @@ footer a:hover{color:var(--white)}
     <h2>Onde dados, modelagem e negócio se encontram</h2>
     <div class="about-grid">
       <div class="about">
+        <div class="me">
+          <img class="me-photo" src="images/foto.jpg" alt="Gustavo Henrique" width="108" height="108" loading="lazy" onerror="this.closest('.me').style.display='none'">
+          <div>
+            <div class="me-name">Gustavo Henrique</div>
+            <div class="me-role">Analista de Dados · Desenvolvedor</div>
+          </div>
+        </div>
         <p>Trabalho na <b>AMBEV</b> como técnico financeiro e logístico, onde desenvolvi do zero uma solução completa de <b>Business Intelligence</b>: pipeline ETL com mais de 800 registros via Power Query, migração de dados de SAP ECC para S/4HANA, modelagem relacional com mais de 30 medidas DAX e um dashboard interativo integrado ao SharePoint, hoje em uso real por toda a unidade.</p>
         <p>Em paralelo, construo projetos próprios para me aprofundar em <b>engenharia de dados</b> e <b>desenvolvimento</b>: do Pipeline da Copa 2026 (Python, dbt e PostgreSQL) a plataformas full stack com NestJS e React. Meu objetivo é atuar profissionalmente com dados, unindo a visão técnica ao contexto de negócio que trago da operação.</p>
         <div class="flow">

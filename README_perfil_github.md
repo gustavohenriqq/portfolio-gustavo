@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/in/gustavohenrique-nasc/"><img src="https://img.shields.io/badge/LinkedIn-Gustavo%20Henrique-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="https://gustavohenriqq.github.io/portfolio/"><img src="https://img.shields.io/badge/Portf%C3%B3lio-C98500?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
+  <a href="https://gustavohenriqq.github.io/portfolio-gustavo/"><img src="https://img.shields.io/badge/Portf%C3%B3lio-C98500?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
   <a href="mailto:silvahenriquegustavo@hotmail.com"><img src="https://img.shields.io/badge/E--mail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 </p>
 
