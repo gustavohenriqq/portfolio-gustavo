@@ -14,7 +14,7 @@
 
 ---
 
-Sou técnico financeiro e logístico na **AMBEV S.A**, onde construí do zero o dashboard de controle de devoluções em **Power BI** (mais de 30 medidas DAX, atualização automática via SharePoint), que substituiu um report 100% manual e hoje é usado pela gestão.
+Sou técnico financeiro e logístico na **AMBEV S.A**, onde construí do zero o dashboard de controle de devoluções em **Power BI** (mais de 30 medidas DAX, atualização automática via SharePoint), que substituiu um report 100% manual e hoje é usado pela gestão, e o relatório do Book OBZ (orçamento base zero), também em uso.
 
 Fora do trabalho, construo projetos de **dados de ponta a ponta**. O mais completo é o pipeline da **Olist**: 99.441 pedidos, dbt com 93 testes, Power BI conferido contra o SQL, modelo de previsão avaliado com honestidade e um agente de IA que responde em português mostrando o SQL. Agora estou no **Radar dos Ônibus de BH**, coletando o GPS dos ônibus a cada 30 segundos para trabalhar com PySpark, Delta Lake e Airflow num volume que justifica essa stack.
 
@@ -28,6 +28,7 @@ Fora do trabalho, construo projetos de **dados de ponta a ponta**. O mais comple
 | **Radar dos Ônibus de BH** (em andamento) · coleta 24/7 do GTFS-Realtime, data lake medallion | `Python` `PySpark` `Delta Lake` `Airflow` | [Repo](https://github.com/gustavohenriqq/radar-onibus-bh) |
 | **Pipeline de Dados Copa do Mundo 2026** · 6 fontes, modelagem dbt e dashboard de 11 páginas | `Python` `pandas` `dbt` `PostgreSQL` `Looker` | [Repo](https://github.com/gustavohenriqq/world-cup-2026-data-pipeline) · [Dashboard](https://datastudio.google.com/reporting/5de5a394-bffa-4065-900f-eba800e4ee9a) |
 | **Dashboard de Devoluções AMBEV** · BI em produção, mais de 30 medidas DAX, atualização via SharePoint | `Power BI` `DAX` `SAP` | 🔒 Privado (confidencialidade) |
+| **Book OBZ em Power BI AMBEV** · relatório de orçamento em uso, PBIP gerado por script, histórico de justificativas e atualização de 16 min para 49 s | `Power BI` `DAX` `Power Query` `Python` | 🔒 Privado (confidencialidade) |
 | **Workflow Approval Engine** · plataforma full stack com RBAC, auditoria e KPIs de SLA | `NestJS` `React` `PostgreSQL` `Docker` | [Repo](https://github.com/gustavohenriqq/workflow-final) |
 | **CodeSentinel** · auditoria de segurança de repositórios GitHub (Actions, Dockerfile, .env) com score de risco | `React` `Node.js` `PostgreSQL` | [Repo](https://github.com/gustavohenriqq/CodeSentinel) |
 

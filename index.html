@@ -736,7 +736,7 @@ footer a:hover{color:var(--white)}
       </a>
     </div>
     <div class="stats">
-      <div class="stat"><b>6</b><span>Projetos ponta a ponta</span></div>
+      <div class="stat"><b>7</b><span>Projetos ponta a ponta</span></div>
       <div class="stat"><b>99 mil</b><span>Pedidos analisados (Olist)</span></div>
       <div class="stat"><b>93</b><span>Testes de dados no dbt (Olist)</span></div>
       <div class="stat"><b>6</b><span>Credenciais (AWS + Google)</span></div>
@@ -932,6 +932,36 @@ footer a:hover{color:var(--white)}
       </div>
 
       <div class="proj">
+        <span class="badge">Repositório privado</span>
+        <div class="tagtop">Power BI · DAX · Power Query · Python</div>
+        <h3>Book OBZ em Power BI · AMBEV</h3>
+        <p>Relatório do Orçamento Base Zero da unidade, em uso, lido direto de uma planilha viva que é substituída a cada atualização. São 8 páginas (visão geral, mês a mês, pacotes, contas, justificativas, evolução e forecast) e um histórico das justificativas mensais, que a planilha apaga todo mês.</p>
+        <div class="stack">
+          <span>Power BI</span><span>DAX</span><span>Power Query</span><span>PBIP</span><span>Python</span><span>SharePoint</span>
+        </div>
+        <details class="proj-more">
+          <summary><span class="arw">▶</span>Ver detalhes</summary>
+          <div class="detail">
+            <h4>Contexto</h4>
+            <p>O acompanhamento do orçamento vivia numa planilha pesada, com macros e vínculos externos, que só guarda as justificativas do mês corrente.</p>
+            <h4>O que construí</h4>
+            <ul>
+              <li>Projeto Power BI (<b>PBIP</b>) gerado por script Python: páginas, medidas e tema saem do código e ficam versionados no git.</li>
+              <li>Leitura da planilha uma única vez por atualização. Trocar o formato do arquivo de .xlsb para .xlsm levou a atualização de <b>mais de 16 minutos para cerca de 49 segundos</b>.</li>
+              <li><b>Histórico das justificativas</b> mês a mês: o mês vem do conteúdo da planilha, não do nome do arquivo, e uma planilha sem textos não apaga o que já foi guardado.</li>
+              <li>Conferência fora do Power BI: um script soma as contas e confere com o total oficial da planilha.</li>
+              <li>Publicação no ambiente corporativo com visual certificado, e nenhum dado da empresa no repositório.</li>
+            </ul>
+            <h4>Resultado</h4>
+            <p>Relatório em uso na unidade, atualizado só subindo a planilha nova no SharePoint.</p>
+          </div>
+        </details>
+        <div class="plinks">
+          <a class="mut">Privado, confidencialidade corporativa</a>
+        </div>
+      </div>
+
+      <div class="proj">
         <div class="tagtop">NestJS · React · Docker</div>
         <h3>Workflow Approval Engine</h3>
         <p>Plataforma full stack de automação de fluxos corporativos, com controle de acesso por papéis (RBAC), auditoria, e um módulo analítico de KPIs e SLA. Back-end em NestJS, front em React 18, banco PostgreSQL com Prisma e cache em Redis.</p>
@@ -1004,7 +1034,7 @@ footer a:hover{color:var(--white)}
       <div class="job">
         <h3>Técnico Financeiro/Logístico — AMBEV S.A</h3>
         <div class="when">Jul 2024 — atual · CDR Sete Lagoas</div>
-        <p>Desenvolvi do zero o dashboard de controle de devoluções em Power BI, com mais de 30 medidas DAX e atualização automática via SharePoint, que substituiu um report 100% manual e hoje é usado pela gestão. Na rotina, acompanho IOH, Orçamento Base Zero, inventário mensal e inventário SOX em Excel avançado, consolidando e validando dados de SAP ECC e S/4HANA, e uso Claude Code (com MCP) para acelerar análises.</p>
+        <p>Desenvolvi do zero o dashboard de controle de devoluções em Power BI, com mais de 30 medidas DAX e atualização automática via SharePoint, que substituiu um report 100% manual e hoje é usado pela gestão, e o relatório do Book OBZ em Power BI, também em uso. Na rotina, acompanho IOH, inventário mensal e inventário SOX em Excel avançado, consolidando e validando dados de SAP ECC e S/4HANA, e uso Claude Code (com MCP) para acelerar análises.</p>
       </div>
       <div class="job">
         <h3>Conferente — ID Logistics Brasil</h3>
