@@ -14,9 +14,9 @@
 
 ---
 
-Sou técnico financeiro e logístico na **AMBEV S.A**, onde construí do zero o dashboard de controle de devoluções em **Power BI** (mais de 30 medidas DAX, atualização automática via SharePoint), que substituiu um report 100% manual e hoje é usado pela gestão, e o relatório do Book OBZ (orçamento base zero), também em uso.
+Sou técnico financeiro e logístico na **AMBEV S.A**, onde construí do zero o dashboard de controle de devoluções em **Power BI** (mais de 30 medidas DAX, atualiza sozinho a partir de uma planilha no SharePoint), que substituiu um report 100% manual e hoje é usado pela gestão, e o relatório do Book OBZ (orçamento base zero), também em uso.
 
-Fora do trabalho, construo projetos de **dados de ponta a ponta**. O mais completo é o pipeline da **Olist**: 99.441 pedidos, dbt com 93 testes, Power BI conferido contra o SQL, modelo de previsão avaliado com honestidade e um agente de IA que responde em português mostrando o SQL. Agora estou no **Radar dos Ônibus de BH**, coletando o GPS dos ônibus a cada 30 segundos para trabalhar com PySpark, Delta Lake e Airflow num volume que justifica essa stack.
+Fora do trabalho, construo projetos de **dados de ponta a ponta**. O mais completo é o pipeline da **Olist**: 99.441 pedidos, dbt com 93 testes, Power BI conferido contra o SQL, modelo de previsão avaliado com honestidade e um agente de IA que responde em português mostrando o SQL. Agora estou no **Radar dos Ônibus de BH**: o coletor que grava o GPS dos ônibus a cada 30 segundos já está no ar, e PySpark, Delta Lake e Airflow entram nas próximas fases.
 
 ---
 
@@ -25,10 +25,10 @@ Fora do trabalho, construo projetos de **dados de ponta a ponta**. O mais comple
 | Projeto | Stack | Links |
 |---|---|---|
 | **Pipeline de Dados Olist** · 99 mil pedidos, atraso que derruba a nota de 4,29 para 2,72, dbt com 93 testes, Power BI, ML e agente de IA | `Python` `dbt` `PostgreSQL` `Power BI` `Streamlit` | [Repo](https://github.com/gustavohenriqq/pipeline-olist) · [Painel e agente](https://painel-olist.streamlit.app/) |
-| **Radar dos Ônibus de BH** (em andamento) · coleta 24/7 do GTFS-Realtime, data lake medallion | `Python` `PySpark` `Delta Lake` `Airflow` | [Repo](https://github.com/gustavohenriqq/radar-onibus-bh) |
+| **Radar dos Ônibus de BH** (em andamento) · coletor 24/7 do GTFS-Realtime a cada 30 s, compactação horária com zstd, alerta externo e 36 testes; 51.772 coletas, 99,934% de cobertura e 0 arquivos corrompidos. Próximas fases: PySpark, Delta Lake, dbt, Airflow e ML | `Python` `GTFS-Realtime` `zstd` | [Repo](https://github.com/gustavohenriqq/radar-onibus-bh) |
 | **Pipeline de Dados Copa do Mundo 2026** · 6 fontes, modelagem dbt e dashboard de 11 páginas | `Python` `pandas` `dbt` `PostgreSQL` `Looker` | [Repo](https://github.com/gustavohenriqq/world-cup-2026-data-pipeline) · [Dashboard](https://datastudio.google.com/reporting/5de5a394-bffa-4065-900f-eba800e4ee9a) |
-| **Dashboard de Devoluções AMBEV** · BI em produção, mais de 30 medidas DAX, atualização via SharePoint | `Power BI` `DAX` `SAP` | 🔒 Privado (confidencialidade) |
-| **Book OBZ em Power BI AMBEV** · relatório de orçamento em uso, PBIP gerado por script, histórico de justificativas e atualização de 16 min para 49 s | `Power BI` `DAX` `Power Query` `Python` | 🔒 Privado (confidencialidade) |
+| **Dashboard de Devoluções AMBEV** · em produção, mais de 30 medidas DAX, atualiza sozinho a partir de uma planilha no SharePoint | `Power BI` `DAX` `Power Query` `SharePoint` | 🔒 Privado (confidencialidade) |
+| **Book OBZ em Power BI AMBEV** · relatório do Orçamento Base Zero com 8 páginas, em uso, lido de planilha no SharePoint, PBIP gerado por script e atualização de 16 min para 49 s | `Power BI` `DAX` `Power Query` `Python` | 🔒 Privado (confidencialidade) |
 | **Workflow Approval Engine** · plataforma full stack com RBAC, auditoria e KPIs de SLA | `NestJS` `React` `PostgreSQL` `Docker` | [Repo](https://github.com/gustavohenriqq/workflow-final) |
 | **CodeSentinel** · auditoria de segurança de repositórios GitHub (Actions, Dockerfile, .env) com score de risco | `React` `Node.js` `PostgreSQL` | [Repo](https://github.com/gustavohenriqq/CodeSentinel) |
 
@@ -41,7 +41,7 @@ Fora do trabalho, construo projetos de **dados de ponta a ponta**. O mais comple
 ![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![scikit-learn (básico)](https://img.shields.io/badge/scikit--learn%20%28b%C3%A1sico%29-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Looker Studio](https://img.shields.io/badge/Looker%20Studio-4285F4?style=for-the-badge&logo=looker&logoColor=white)
 
@@ -72,9 +72,9 @@ Fora do trabalho, construo projetos de **dados de ponta a ponta**. O mais comple
 
 - 🎓 Cursando **Ciência da Computação** na UNA Sete Lagoas (conclusão em dez/2027)
 - 💼 Técnico Financeiro/Logístico na **AMBEV S.A**
-- 🚌 Construindo o **Radar dos Ônibus de BH**: PySpark, Delta Lake e Airflow
+- 🚌 Construindo o **Radar dos Ônibus de BH**: coletor 24/7 no ar; PySpark, Delta Lake e Airflow nas próximas fases
 - 🟡 **Google Student Ambassador 2026**, levando IA generativa (Gemini) para a comunidade
-- 📊 **Google Data Analytics Professional** (Coursera), em andamento, 5 de 8 cursos
+- 📊 **Google Data Analytics Professional** (Coursera), em andamento (5 de 8 cursos)
 - ☁️ **AWS Cloud Fundamentals** (AWS Treina Brasil)
 - 🧠 Estudando **Databricks** e **Azure**, a stack que quero usar profissionalmente
 
