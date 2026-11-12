@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gustavo Henrique · Dados &amp; BI · Desenvolvimento</title>
-<meta name="description" content="Gustavo Henrique, projetos de dados, BI e desenvolvimento de software. Power BI, SQL, dbt, Python. Pipelines de dados, dashboards e engenharia analítica.">
+<title>Gustavo Henrique · Dados &amp; BI</title>
+<meta name="description" content="Gustavo Henrique, projetos de dados e BI. Power BI, SQL, dbt, Python. Relatórios em uso na AMBEV e pipelines de dados ponta a ponta, do dado bruto à recomendação.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -523,10 +523,10 @@ h2{
 .proj-more{margin:16px 0 2px;border-top:1px solid var(--b);padding-top:6px}
 .proj-more summary{
   list-style:none;cursor:pointer;font-family:var(--font-title);font-weight:700;font-size:13px;
-  color:var(--gold);display:inline-flex;align-items:center;gap:7px;padding:8px 0;user-select:none;transition:.2s;
+  color:#E4E4E7;display:inline-flex;align-items:center;gap:7px;padding:8px 0;user-select:none;transition:.2s;
 }
 .proj-more summary::-webkit-details-marker{display:none}
-.proj-more summary:hover{color:#FFC247}
+.proj-more summary:hover{color:var(--white)}
 .proj-more summary .arw{transition:transform .25s ease;font-size:11px}
 .proj-more[open] summary .arw{transform:rotate(90deg)}
 .proj-more .detail{padding:6px 0 4px;animation:fadeDet .3s ease}
@@ -543,6 +543,70 @@ h2{
 .proj-more .detail ul{margin:0;padding-left:18px}
 .proj-more .detail li{font-size:13.5px;color:var(--ink);margin-bottom:5px;line-height:1.55}
 .proj-more .detail li b{color:var(--white);font-weight:600}
+
+/* Hero: texto + prova */
+.hero-grid{display:grid;grid-template-columns:1.08fr 1fr;gap:48px;align-items:start}
+@media(max-width:940px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+.hero-grid h1{font-size:clamp(34px,4.3vw,48px);text-wrap:balance}
+.proj p{flex:none}
+.proj .plinks{margin-top:auto;padding-top:4px}
+.proof{
+  display:block;background:var(--panel);border:1px solid var(--b);border-radius:18px;overflow:hidden;
+  box-shadow:0 24px 60px rgba(0,0,0,.55);transition:all .3s cubic-bezier(0.4,0,0.2,1);
+}
+.proof:hover{border-color:var(--b-hover);transform:translateY(-3px)}
+.proof-bar{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 16px;
+  border-bottom:1px solid var(--b);font-family:var(--font-mono);font-size:10.5px;font-weight:600;
+  letter-spacing:1.2px;text-transform:uppercase;color:#A1A1AA;
+}
+.proof-bar .live{color:#34D399;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.proof img{width:100%;height:auto;display:block;aspect-ratio:1562/877;object-fit:cover;background:#0B0B0B}
+.proof-finds{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--b)}
+.proof-finds div{padding:14px 16px;border-left:1px solid var(--b)}
+.proof-finds div:first-child{border-left:0}
+.proof-finds b{font-family:var(--font-title);font-weight:900;color:var(--white);font-size:19px;display:block;line-height:1.1;white-space:nowrap}
+.proof-finds span{font-size:11.5px;color:var(--muted);display:block;margin-top:6px;line-height:1.4}
+.proof-go{
+  display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-top:1px solid var(--b);
+  font-family:var(--font-title);font-weight:700;font-size:13px;color:var(--white);
+}
+.proof:hover .proof-go{background:rgba(255,255,255,.04)}
+@media(max-width:520px){
+  .proof-finds{grid-template-columns:1fr}
+  .proof-finds div{border-left:0;border-top:1px solid var(--b)}
+  .proof-finds div:first-child{border-top:0}
+}
+
+/* Achados no card do projeto */
+.finds-h{
+  font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--muted);margin:20px 0 10px;padding-top:16px;border-top:1px solid var(--b);
+}
+.finds{list-style:none;display:grid;gap:10px}
+.finds li{display:grid;grid-template-columns:142px 1fr;gap:14px;align-items:baseline;font-size:13.5px;color:#A1A1AA;line-height:1.5}
+.finds li b{font-family:var(--font-title);font-weight:900;color:var(--white);font-size:19px;white-space:nowrap;line-height:1.2}
+.proj.feat{grid-column:1/-1}
+.proj.feat .finds{grid-template-columns:repeat(3,1fr);gap:18px}
+.proj.feat .finds li{grid-template-columns:1fr;gap:4px}
+.proj.feat .finds li b{font-size:26px}
+@media(max-width:700px){.proj.feat .finds{grid-template-columns:1fr}}
+@media(max-width:520px){.finds li{grid-template-columns:1fr;gap:2px}}
+
+/* Outros projetos (desenvolvimento) */
+.others{margin-top:56px}
+.others-h p{color:var(--muted);font-size:14.5px;margin:4px 0 18px;max-width:640px}
+.others-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.others-grid{grid-template-columns:1fr}}
+.mini{
+  display:flex;flex-direction:column;gap:6px;padding:20px 22px;background:#0B0B0B;border:1px solid var(--b);
+  border-radius:14px;transition:all .25s ease;
+}
+.mini:hover{border-color:rgba(255,255,255,.3);transform:translateY(-2px);background:#121212}
+.mini .tagtop{font-family:var(--font-mono);font-size:11px;font-weight:600;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+.mini h4{font-family:var(--font-title);font-weight:800;color:var(--white);font-size:16.5px}
+.mini p{font-size:13.5px;color:#A1A1AA;line-height:1.55;flex:1}
+.mini .go{font-family:var(--font-title);font-weight:700;font-size:13px;color:var(--white);margin-top:6px}
 
 /* Timeline */
 .tl{border-left:2px solid rgba(255,255,255,0.1);margin-left:12px;position:relative}
@@ -717,10 +781,12 @@ footer a:hover{color:var(--white)}
 
 <header id="top">
   <div class="wrap reveal">
-    <div class="eyebrow"><span class="dot"></span>Dados &amp; BI · Desenvolvimento</div>
-    <h1>Transformo dados em<br><span class="g">decisões</span> e sistemas.</h1>
-    <div class="sub">Power BI · SQL · dbt · Python · Engenharia de Dados</div>
-    <p class="lead">Estudante de Ciências da Computação e técnico na AMBEV, onde construí uma solução de BI em produção do zero. Fora do trabalho, construo pipelines de dados ponta a ponta e aplicações full stack, do SQL ao dashboard, da modelagem à API.</p>
+    <div class="hero-grid">
+    <div>
+    <div class="eyebrow"><span class="dot"></span>Dados &amp; BI · Aberto a oportunidades</div>
+    <h1>Transformo dados em <span class="g">decisões</span> que a gestão usa.</h1>
+    <div class="sub">Power BI · SQL · dbt · Python</div>
+    <p class="lead">Estudante de Ciência da Computação e técnico financeiro e logístico na AMBEV, onde construí do zero dois relatórios em Power BI que a gestão usa hoje. Fora do trabalho, construo pipelines de dados ponta a ponta, do dado bruto à recomendação.</p>
     <div class="cta">
       <a href="#projetos" class="btn btn-p">
         Ver projetos
@@ -735,11 +801,23 @@ footer a:hover{color:var(--white)}
         LinkedIn
       </a>
     </div>
+    </div>
+    <a class="proof" href="https://painel-olist.streamlit.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir o painel do projeto Olist">
+      <div class="proof-bar"><span>Pipeline Olist · Power BI</span><span class="live"><span class="pulse-dot"></span>Painel ao vivo</span></div>
+      <img src="images/olist-powerbi.jpg" alt="Power BI do projeto Olist, visão executiva" width="1562" height="877">
+      <div class="proof-finds">
+        <div><b>4,29 → 2,72</b><span>nota do cliente quando a entrega atrasa uma semana</span></div>
+        <div><b>86%</b><span>do atraso acima do esperado está no RJ e no Nordeste</span></div>
+        <div><b>87%</b><span>do atraso nasce no transporte, não no vendedor</span></div>
+      </div>
+      <div class="proof-go"><span>Abrir o painel e o agente de IA</span><span>↗</span></div>
+    </a>
+    </div>
     <div class="stats">
-      <div class="stat"><b>7</b><span>Projetos ponta a ponta</span></div>
-      <div class="stat"><b>99 mil</b><span>Pedidos analisados (Olist)</span></div>
+      <div class="stat"><b>2</b><span>Relatórios Power BI em uso na AMBEV</span></div>
+      <div class="stat"><b>99 mil</b><span>Pedidos reais analisados (Olist)</span></div>
       <div class="stat"><b>93</b><span>Testes de dados no dbt (Olist)</span></div>
-      <div class="stat"><b>6</b><span>Credenciais (AWS + Google)</span></div>
+      <div class="stat"><b>49 s</b><span>Atualização do Book OBZ (antes, mais de 16 min)</span></div>
     </div>
   </div>
 </header>
@@ -754,12 +832,12 @@ footer a:hover{color:var(--white)}
           <img class="me-photo" src="images/foto.jpg" alt="Gustavo Henrique" width="108" height="108" loading="lazy" onerror="this.closest('.me').style.display='none'">
           <div>
             <div class="me-name">Gustavo Henrique</div>
-            <div class="me-role">Dados &amp; BI · Desenvolvimento</div>
+            <div class="me-role">Dados &amp; BI</div>
           </div>
         </div>
         <p>Sou técnico financeiro e logístico na <b>AMBEV</b>. No dia a dia, consolido e valido dados de múltiplas frentes (cotações e pedidos, controle e reclassificação de custos, orçamento), acompanho KPIs financeiros como o <b>IOH</b> (spend pendente vs. pago) e o <b>Orçamento Base Zero</b>, e conduzo o inventário mensal, o <b>inventário SOX</b> (auditoria) e o controle de devoluções, sempre com atenção à qualidade e à rastreabilidade das informações.</p>
         <p>Foi acompanhando essa operação que identifiquei um gargalo no controle de devoluções e desenvolvi do zero uma solução de <b>Business Intelligence</b>: dashboard em Power BI com mais de <b>30 medidas DAX</b>, que atualiza sozinho a partir de uma planilha no SharePoint, substituiu um report 100% manual e hoje é usado pela gestão. Depois veio o relatório do <b>Book OBZ</b> (Orçamento Base Zero), também em uso. Também uso IA generativa (Claude com MCP) na rotina para acelerar análises.</p>
-        <p>Em paralelo, construo projetos próprios para me aprofundar em <b>engenharia de dados</b> e <b>desenvolvimento</b>: do pipeline da Olist (dbt, Power BI conferido contra o SQL, modelo de previsão e agente de IA) à coleta em tempo real dos ônibus de BH, passando pelo Pipeline da Copa 2026 e por plataformas full stack com NestJS e React. Meu objetivo é atuar profissionalmente com dados, unindo a visão técnica ao contexto de negócio que trago da operação.</p>
+        <p>Em paralelo, construo projetos próprios para me aprofundar em <b>análise</b> e <b>engenharia de dados</b>: do pipeline da Olist (dbt, Power BI conferido contra o SQL, modelo de previsão e agente de IA) à coleta em tempo real dos ônibus de BH, passando pelo Pipeline da Copa 2026. Meu objetivo é atuar profissionalmente com dados, unindo a visão técnica ao contexto de negócio que trago da operação.</p>
         <div class="flow">
           <span>coleta</span> → <span>modelagem</span> → <span>transformação (dbt)</span> → <span>data warehouse</span> → <span>visualização</span>
         </div>
@@ -791,11 +869,6 @@ footer a:hover{color:var(--white)}
       <div class="tech"><svg viewBox="0 0 44 24" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="24" rx="6" fill="#FF694A"/><text x="22" y="17" text-anchor="middle" font-family="Archivo,Arial" font-weight="800" font-size="13" fill="#fff">dbt</text></svg><span>dbt</span></div>
       <div class="tech"><img src="https://cdn.simpleicons.org/looker" alt="" onerror="this.style.display='none'"><span>Looker Studio</span></div>
       <div class="tech"><img src="https://cdn.simpleicons.org/streamlit" alt="" onerror="this.style.display='none'"><span>Streamlit</span></div>
-      <div class="tech"><img src="https://cdn.simpleicons.org/react" alt="" onerror="this.style.display='none'"><span>React</span></div>
-      <div class="tech"><img src="https://cdn.simpleicons.org/nestjs" alt="" onerror="this.style.display='none'"><span>NestJS</span></div>
-      <div class="tech"><img src="https://cdn.simpleicons.org/nodedotjs/6DA55F" alt="" onerror="this.style.display='none'"><span>Node.js</span></div>
-      <div class="tech"><img src="https://cdn.simpleicons.org/typescript" alt="" onerror="this.style.display='none'"><span>TypeScript</span></div>
-      <div class="tech"><img src="https://cdn.simpleicons.org/spring/6DB33F" alt="" onerror="this.style.display='none'"><span>Spring Boot</span></div>
       <div class="tech"><img src="https://cdn.simpleicons.org/docker" alt="" onerror="this.style.display='none'"><span>Docker</span></div>
       <div class="tech"><img src="https://cdn.simpleicons.org/git/F05032" alt="" onerror="this.style.display='none'"><span>Git</span></div>
       <div class="tech"><img src="https://cdn.simpleicons.org/googlegemini" alt="" onerror="this.style.display='none'"><span>Gemini</span></div>
@@ -808,21 +881,27 @@ footer a:hover{color:var(--white)}
   <div class="wrap reveal">
     <div class="kick">Portfólio</div>
     <h2>Projetos ponta a ponta</h2>
-    <p class="sec-lead">Da ingestão à visualização: pipelines de dados, dashboards em produção e aplicações full stack, com o código aberto no GitHub.</p>
+    <p class="sec-lead">Relatórios em uso na AMBEV e pipelines de dados com o código aberto no GitHub. Em cada projeto, o resultado vem primeiro; o como fica em "Ver detalhes".</p>
     <div class="projects">
 
-      <div class="proj">
+      <div class="proj feat">
         <span class="badge live"><span class="pulse-dot"></span>Painel ao vivo</span>
         <div class="tagtop">Python · dbt · Power BI · IA</div>
         <h3>Pipeline de Dados Olist: do dado bruto ao dashboard e à IA</h3>
-        <p>Pipeline de ponta a ponta sobre 99.441 pedidos reais do e-commerce brasileiro. Atrasar a entrega uma semana derruba a nota do cliente de 4,29 para 2,72, e a análise mostra onde agir: Rio de Janeiro e Nordeste somam 86% do atraso acima do esperado, e 87% do atraso nasce no transporte, não no vendedor.</p>
+        <p>Pipeline de ponta a ponta sobre 99.441 pedidos reais do e-commerce brasileiro, para responder quanto o atraso na entrega custa, onde ele se concentra e o que fazer.</p>
+        <div class="finds-h">O que os dados mostraram</div>
+        <ul class="finds">
+          <li><b>4,29 → 2,72</b><span>é a queda na nota do cliente quando a entrega atrasa uma semana.</span></li>
+          <li><b>86%</b><span>do atraso acima do esperado está no Rio de Janeiro e no Nordeste.</span></li>
+          <li><b>87%</b><span>do atraso nasce no transporte, não no vendedor. A recomendação: priorizar a malha logística, não cobrar o vendedor.</span></li>
+        </ul>
         <div class="stack">
           <span>Python</span><span>dbt</span><span>PostgreSQL</span><span>Power BI</span><span>DAX</span><span>Looker Studio</span><span>Streamlit</span><span>scikit-learn (básico)</span>
         </div>
         <details class="proj-more">
           <summary><span class="arw">▶</span>Ver detalhes</summary>
           <div class="detail">
-            <div class="proj-thumb"><img src="images/olist-powerbi.jpg" alt="Power BI do projeto Olist, Visão executiva" onerror="this.closest('.proj-thumb').remove()"></div>
+            <div class="proj-thumb"><img src="images/olist-powerbi.jpg" alt="Power BI do projeto Olist, Visão executiva" loading="lazy" onerror="this.closest('.proj-thumb').remove()"></div>
             <h4>Contexto</h4>
             <p>Quis responder uma pergunta de negócio com o ciclo inteiro de dados: quanto o atraso custa, onde ele se concentra e o que fazer.</p>
             <h4>O que construí</h4>
@@ -833,7 +912,7 @@ footer a:hover{color:var(--white)}
               <li>Modelo de previsão de atraso avaliado contra uma régua simples: ordena o risco melhor, mas o alerta não se pagou no teste, e está documentado assim.</li>
               <li>Painel web em Streamlit com um <b>agente de IA</b> que transforma a pergunta em SQL e mostra a consulta, com guardas no banco (<b>25 de 25</b> respostas corretas na avaliação).</li>
             </ul>
-            <div class="proj-thumb"><img src="images/olist-painel-agente.jpg" alt="Painel web com o agente de IA respondendo" onerror="this.closest('.proj-thumb').remove()"></div>
+            <div class="proj-thumb"><img src="images/olist-painel-agente.jpg" alt="Painel web com o agente de IA respondendo" loading="lazy" onerror="this.closest('.proj-thumb').remove()"></div>
             <h4>Resultado</h4>
             <p>Recomendação concreta (priorizar a malha logística do Rio e do Nordeste, não cobrar o vendedor), com todos os números reproduzíveis pelo repositório.</p>
           </div>
@@ -846,10 +925,83 @@ footer a:hover{color:var(--white)}
       </div>
 
       <div class="proj">
+        <span class="badge">Em uso · AMBEV</span>
+        <div class="tagtop">Power BI · DAX · Power Query · Python</div>
+        <h3>Book OBZ em Power BI</h3>
+        <p>Relatório do Orçamento Base Zero da unidade, lido de uma planilha no SharePoint que é trocada a cada atualização.</p>
+        <div class="finds-h">Resultado</div>
+        <ul class="finds">
+          <li><b>16 min → 49 s</b><span>na atualização, depois de ler a planilha uma vez só e trocar .xlsb por .xlsm.</span></li>
+          <li><b>8 páginas</b><span>em uso na unidade, atualizadas só subindo a planilha nova.</span></li>
+          <li><b>Histórico</b><span>das justificativas mensais, que a planilha apaga todo mês.</span></li>
+        </ul>
+        <div class="stack">
+          <span>Power BI</span><span>DAX</span><span>Power Query</span><span>PBIP</span><span>Python</span><span>SharePoint</span>
+        </div>
+        <details class="proj-more">
+          <summary><span class="arw">▶</span>Ver detalhes</summary>
+          <div class="detail">
+            <h4>Contexto</h4>
+            <p>O acompanhamento do orçamento vivia numa planilha pesada, com macros e vínculos externos, que só guarda as justificativas do mês corrente.</p>
+            <h4>O que construí</h4>
+            <ul>
+              <li>Projeto Power BI (<b>PBIP</b>) gerado por script Python: páginas, medidas e tema saem do código e ficam versionados no git.</li>
+              <li>Leitura da planilha uma única vez por atualização. Trocar o formato do arquivo de .xlsb para .xlsm levou a atualização de <b>mais de 16 minutos para cerca de 49 segundos</b>.</li>
+              <li><b>Histórico das justificativas</b> mês a mês: o mês vem do conteúdo da planilha, não do nome do arquivo, e uma planilha sem textos não apaga o que já foi guardado.</li>
+              <li>Conferência fora do Power BI: um script soma as contas e confere com o total oficial da planilha.</li>
+              <li>Publicação no ambiente corporativo com visual certificado, e nenhum dado da empresa no repositório.</li>
+            </ul>
+          </div>
+        </details>
+        <div class="plinks">
+          <a class="mut">Privado, confidencialidade corporativa</a>
+        </div>
+      </div>
+
+      <div class="proj">
+        <span class="badge">Em uso · AMBEV</span>
+        <div class="tagtop">Power BI · DAX · Power Query · SharePoint</div>
+        <h3>Dashboard de Devoluções</h3>
+        <p>Modelo semântico em Power BI para o controle de devoluções da unidade, que antes dependia de um report totalmente manual.</p>
+        <div class="finds-h">Resultado</div>
+        <ul class="finds">
+          <li><b>Em uso</b><span>pela gestão, no lugar do report manual.</span></li>
+          <li><b>30+</b><span>medidas DAX, com tabelas fato e dimensão.</span></li>
+          <li><b>Automático</b><span>atualiza sozinho a partir de uma planilha no SharePoint.</span></li>
+        </ul>
+        <div class="stack">
+          <span>Power BI</span><span>DAX</span><span>Power Query</span><span>SharePoint</span>
+        </div>
+        <details class="proj-more">
+          <summary><span class="arw">▶</span>Ver detalhes</summary>
+          <div class="detail">
+            <div class="proj-thumb"><img src="images/dashboard-ambev.png" alt="Dashboard AMBEV (mock sem dados reais)" loading="lazy" onerror="this.closest('.proj-thumb').remove()"></div>
+            <h4>Contexto</h4>
+            <p>O controle de devoluções da unidade dependia de um report totalmente manual, sem visibilidade rápida para a gestão.</p>
+            <h4>O que construí</h4>
+            <ul>
+              <li>Modelo semântico em Power BI com <b>mais de 30 medidas DAX</b> e relações entre tabelas fato e dimensão.</li>
+              <li>Atualização automática a partir de uma planilha no <b>SharePoint</b>.</li>
+              <li>Na planilha, uma consulta converte o código do SAP ECC para o código do S/4HANA.</li>
+            </ul>
+          </div>
+        </details>
+        <div class="plinks">
+          <a class="mut">Privado, confidencialidade corporativa</a>
+        </div>
+      </div>
+
+      <div class="proj">
         <span class="badge">Em andamento</span>
         <div class="tagtop">Python · GTFS-Realtime · zstd</div>
         <h3>Radar dos Ônibus de BH</h3>
-        <p>Coletor em Python, no ar 24/7, que grava o feed GTFS-Realtime dos ônibus de Belo Horizonte a cada 30 segundos. Em 18 dias de auditoria foram 51.772 coletas, 99,934% de cobertura e 0 arquivos corrompidos. A pergunta que o projeto vai responder: quanto tempo o passageiro perde com a irregularidade do serviço e onde isso se concentra.</p>
+        <p>Coletor em Python, no ar 24/7, que grava a posição dos ônibus de Belo Horizonte a cada 30 segundos. A pergunta que o projeto vai responder: quanto tempo o passageiro perde com a irregularidade do serviço e onde isso se concentra.</p>
+        <div class="finds-h">Onde está hoje</div>
+        <ul class="finds">
+          <li><b>51.772</b><span>coletas em 18 dias de auditoria.</span></li>
+          <li><b>99,934%</b><span>de cobertura, com alerta externo se a coleta parar.</span></li>
+          <li><b>0</b><span>arquivos corrompidos, com 36 testes automatizados.</span></li>
+        </ul>
         <div class="stack">
           <span>Python</span><span>GTFS-Realtime</span><span>zstd</span><span>systemd</span><span>pytest</span>
         </div>
@@ -879,14 +1031,20 @@ footer a:hover{color:var(--white)}
         <span class="badge live"><span class="pulse-dot"></span>Dashboard ao vivo</span>
         <div class="tagtop">Python · dbt · PostgreSQL</div>
         <h3>Pipeline de Dados · Copa do Mundo 2026</h3>
-        <p>Pipeline ETL de ponta a ponta com 6 fontes (ESPN API, football-data, FBref, StatsBomb, Open-Meteo), modelagem dimensional em dbt (staging → marts com testes de qualidade) e um dashboard de 11 páginas no Looker Studio: análise por partida, jogador, seleção, goleiro e clima.</p>
+        <p>Pipeline ETL de ponta a ponta, com modelagem dimensional em dbt e um dashboard no Looker Studio com análise por partida, jogador, seleção, goleiro e clima.</p>
+        <div class="finds-h">Em números</div>
+        <ul class="finds">
+          <li><b>6 fontes</b><span>públicas integradas (ESPN API, football-data, FBref, StatsBomb, Open-Meteo).</span></li>
+          <li><b>11 páginas</b><span>de dashboard no Looker Studio, online 24/7.</span></li>
+          <li><b>dbt</b><span>staging → marts, com testes de qualidade de dados.</span></li>
+        </ul>
         <div class="stack">
           <span>Python</span><span>pandas</span><span>dbt</span><span>PostgreSQL</span><span>Neon</span><span>Looker Studio</span><span>Docker</span>
         </div>
         <details class="proj-more">
           <summary><span class="arw">▶</span>Ver detalhes</summary>
           <div class="detail">
-            <div class="proj-thumb"><img src="images/copa-2026.png" alt="Dashboard Copa 2026" onerror="this.closest('.proj-thumb').remove()"></div>
+            <div class="proj-thumb"><img src="images/copa-2026.png" alt="Dashboard Copa 2026" loading="lazy" onerror="this.closest('.proj-thumb').remove()"></div>
             <h4>Contexto</h4>
             <p>Quis unir futebol e dados num projeto de verdade, cobrindo o ciclo completo de engenharia de dados, da coleta ao dashboard.</p>
             <h4>O que construí</h4>
@@ -896,130 +1054,36 @@ footer a:hover{color:var(--white)}
               <li>Carga em <b>PostgreSQL</b> sincronizado com a nuvem (Neon) e dashboard de <b>11 páginas</b> no Looker Studio.</li>
             </ul>
             <h4>Resultado</h4>
-            <p>Pipeline reproduzível e documentado, com dashboard online 24/7 analisando partidas, jogadores, seleções, goleiros e clima. Foi o projeto onde consolidei dbt e a arquitetura de um pipeline ponta a ponta.</p>
+            <p>Pipeline reproduzível e documentado. Foi o projeto onde consolidei dbt e a arquitetura de um pipeline ponta a ponta.</p>
           </div>
         </details>
         <div class="plinks">
           <a href="https://datastudio.google.com/reporting/5de5a394-bffa-4065-900f-eba800e4ee9a" target="_blank" rel="noopener noreferrer">Dashboard ao vivo ↗</a>
-          <a href="https://github.com/gustavohenriqq/world-cup-2026-data-pipeline" target="_blank" rel="noopener noreferrer" class="mut">Repositório ↗</a>
+          <a href="https://github.com/gustavohenriqq/world-cup-2026-data-pipeline" target="_blank" rel="noopener noreferrer">Repositório ↗</a>
         </div>
       </div>
 
-      <div class="proj">
-        <span class="badge">Repositório privado</span>
-        <div class="tagtop">Power BI · DAX · Power Query · SharePoint</div>
-        <h3>Dashboard de Devoluções · AMBEV</h3>
-        <p>Modelo semântico em Power BI para o controle de devoluções, com mais de 30 medidas DAX e relações entre tabelas fato e dimensão. Atualiza sozinho a partir de uma planilha no SharePoint. Está em produção na AMBEV e substituiu um report 100% manual.</p>
-        <div class="stack">
-          <span>Power BI</span><span>DAX</span><span>Power Query</span><span>SharePoint</span>
-        </div>
-        <details class="proj-more">
-          <summary><span class="arw">▶</span>Ver detalhes</summary>
-          <div class="detail">
-            <div class="proj-thumb"><img src="images/dashboard-ambev.png" alt="Dashboard AMBEV (mock sem dados reais)" onerror="this.closest('.proj-thumb').remove()"></div>
-            <h4>Contexto</h4>
-            <p>O controle de devoluções da unidade dependia de um report totalmente manual, sem visibilidade rápida para a gestão.</p>
-            <h4>O que construí</h4>
-            <ul>
-              <li>Modelo semântico em Power BI com <b>mais de 30 medidas DAX</b> e relações entre tabelas fato e dimensão.</li>
-              <li>Atualização automática a partir de uma planilha no <b>SharePoint</b>.</li>
-              <li>Na planilha, uma consulta converte o código do SAP ECC para o código do S/4HANA.</li>
-            </ul>
-            <h4>Resultado</h4>
-            <p>Em produção na unidade, usado pela gestão no lugar de um report 100% manual.</p>
-          </div>
-        </details>
-        <div class="plinks">
-          <a class="mut">Privado, confidencialidade corporativa</a>
-        </div>
-      </div>
+    </div>
 
-      <div class="proj">
-        <span class="badge">Repositório privado</span>
-        <div class="tagtop">Power BI · DAX · Power Query · Python</div>
-        <h3>Book OBZ em Power BI · AMBEV</h3>
-        <p>Relatório do Orçamento Base Zero da unidade, com 8 páginas, em uso. É lido de uma planilha no SharePoint, trocada a cada atualização, e guarda um histórico das justificativas mensais, que a planilha apaga todo mês.</p>
-        <div class="stack">
-          <span>Power BI</span><span>DAX</span><span>Power Query</span><span>PBIP</span><span>Python</span><span>SharePoint</span>
-        </div>
-        <details class="proj-more">
-          <summary><span class="arw">▶</span>Ver detalhes</summary>
-          <div class="detail">
-            <h4>Contexto</h4>
-            <p>O acompanhamento do orçamento vivia numa planilha pesada, com macros e vínculos externos, que só guarda as justificativas do mês corrente.</p>
-            <h4>O que construí</h4>
-            <ul>
-              <li>Projeto Power BI (<b>PBIP</b>) gerado por script Python: páginas, medidas e tema saem do código e ficam versionados no git.</li>
-              <li>Leitura da planilha uma única vez por atualização. Trocar o formato do arquivo de .xlsb para .xlsm levou a atualização de <b>mais de 16 minutos para cerca de 49 segundos</b>.</li>
-              <li><b>Histórico das justificativas</b> mês a mês: o mês vem do conteúdo da planilha, não do nome do arquivo, e uma planilha sem textos não apaga o que já foi guardado.</li>
-              <li>Conferência fora do Power BI: um script soma as contas e confere com o total oficial da planilha.</li>
-              <li>Publicação no ambiente corporativo com visual certificado, e nenhum dado da empresa no repositório.</li>
-            </ul>
-            <h4>Resultado</h4>
-            <p>Relatório em uso na unidade, atualizado só subindo a planilha nova no SharePoint.</p>
-          </div>
-        </details>
-        <div class="plinks">
-          <a class="mut">Privado, confidencialidade corporativa</a>
-        </div>
+    <div class="others">
+      <div class="others-h">
+        <div class="kick">Outros projetos · desenvolvimento</div>
+        <p>Antes de focar em dados, construí aplicações full stack. Ficam aqui como prova de código.</p>
       </div>
-
-      <div class="proj">
-        <div class="tagtop">NestJS · React · Docker</div>
-        <h3>Workflow Approval Engine</h3>
-        <p>Plataforma full stack de automação de fluxos corporativos, com controle de acesso por papéis (RBAC), auditoria, e um módulo analítico de KPIs e SLA. Back-end em NestJS, front em React 18, banco PostgreSQL com Prisma e cache em Redis.</p>
-        <div class="stack">
-          <span>NestJS</span><span>React 18</span><span>TypeScript</span><span>PostgreSQL</span><span>Prisma</span><span>Redis</span><span>JWT</span><span>Docker</span>
-        </div>
-        <details class="proj-more">
-          <summary><span class="arw">▶</span>Ver detalhes</summary>
-          <div class="detail">
-            <div class="proj-thumb"><img src="images/workflow.png" alt="Workflow Approval Engine" onerror="this.closest('.proj-thumb').remove()"></div>
-            <h4>Contexto</h4>
-            <p>Fluxos de aprovação corporativos costumam ser manuais, sem rastreio nem métricas de tempo e cumprimento.</p>
-            <h4>O que construí</h4>
-            <ul>
-              <li>Plataforma full stack: back-end <b>NestJS</b> e front <b>React 18</b>, com controle de acesso por papéis (RBAC) e autenticação JWT.</li>
-              <li>Cache com Redis, auditoria completa e um <b>módulo analítico</b> de KPIs, SLA e lead time.</li>
-              <li>Containerização com Docker e testes automatizados com Jest.</li>
-            </ul>
-            <h4>Resultado</h4>
-            <p>Automação de fluxos com validação de dados em ambiente de produção e visibilidade dos indicadores operacionais em um só lugar.</p>
-          </div>
-        </details>
-        <div class="plinks">
-          <a href="https://github.com/gustavohenriqq/workflow-final" target="_blank" rel="noopener noreferrer">Repositório ↗</a>
-        </div>
+      <div class="others-grid">
+        <a class="mini" href="https://github.com/gustavohenriqq/workflow-final" target="_blank" rel="noopener noreferrer">
+          <span class="tagtop">NestJS · React · PostgreSQL · Docker</span>
+          <h4>Workflow Approval Engine</h4>
+          <p>Fluxos de aprovação com controle de acesso por papéis (RBAC), auditoria e um módulo analítico de KPIs, SLA e lead time.</p>
+          <span class="go">Repositório ↗</span>
+        </a>
+        <a class="mini" href="https://github.com/gustavohenriqq/CodeSentinel" target="_blank" rel="noopener noreferrer">
+          <span class="tagtop">React · Node.js · PostgreSQL</span>
+          <h4>CodeSentinel</h4>
+          <p>Audita a segurança de repositórios GitHub (Actions, Dockerfile, package.json, .env) e dá um score de risco de 0 a 100, com causa e correção.</p>
+          <span class="go">Repositório ↗</span>
+        </a>
       </div>
-
-      <div class="proj">
-        <div class="tagtop">React · Node.js · PostgreSQL</div>
-        <h3>CodeSentinel</h3>
-        <p>Ferramenta de auditoria de segurança para repositórios GitHub. Conecta ao repo, analisa workflows do GitHub Actions, Dockerfile, package.json e arquivos .env, e gera um score de risco de 0 a 100 com o problema, a causa e a correção de cada item.</p>
-        <div class="stack">
-          <span>React</span><span>Vite</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>Prisma</span><span>JWT</span><span>GitHub API</span>
-        </div>
-        <details class="proj-more">
-          <summary><span class="arw">▶</span>Ver detalhes</summary>
-          <div class="detail">
-            <div class="proj-thumb"><img src="images/codesentinel.png" alt="CodeSentinel" onerror="this.closest('.proj-thumb').remove()"></div>
-            <h4>Contexto</h4>
-            <p>Pipelines de CI/CD acumulam riscos silenciosos (permissões abertas, secrets expostos, imagens sem tag). Quis um jeito de auditar isso de forma automática e didática.</p>
-            <h4>O que construí</h4>
-            <ul>
-              <li>App full stack (<b>React + Vite</b> no front, <b>Node/Express</b> no back) que conecta a qualquer repo GitHub via API.</li>
-              <li>Engine de regras que analisa <b>GitHub Actions, Dockerfile, docker-compose, package.json e .env</b>, classificando achados por severidade.</li>
-              <li><b>Score de 0 a 100</b>, abertura automática de issue com o relatório e badge de segurança pro README.</li>
-            </ul>
-            <h4>Resultado</h4>
-            <p>Ferramenta funcional (com modo demo) que traduz boas práticas de segurança em CI/CD num diagnóstico claro, com causa e correção para cada risco.</p>
-          </div>
-        </details>
-        <div class="plinks">
-          <a href="https://github.com/gustavohenriqq/CodeSentinel" target="_blank" rel="noopener noreferrer">Repositório ↗</a>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
